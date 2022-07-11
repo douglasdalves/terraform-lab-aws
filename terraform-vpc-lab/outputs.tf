@@ -25,15 +25,3 @@ output "route_table_assossiation_ids" {
 output "sg_web_id" {
   value = aws_security_group.web.id
 }
-
-output "sg_db_id" {
-  value = aws_security_group.db.id
-}
-
-output "sg_alb_id" {
-  value = aws_security_group.alb.id
-}
-
-output "alb_id" {
-  value = aws_lb.this.id
-}

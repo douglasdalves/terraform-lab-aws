@@ -31,7 +31,7 @@ variable "instance_type" {
 variable "instance_ami" {
   type        = string
   description = ""
-  default     = "ami-0022f774911c1d690"
+  default     = "ami-0cff7528ff583bf9a"
 }
 # Amazon Linux 2 Kernel 5.10 AMI 2.0.20220426.0 x86_64 HVM gp2
 
