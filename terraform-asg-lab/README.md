@@ -20,5 +20,5 @@ https://docs.aws.amazon.com/pt_br/AWSEC2/latest/UserGuide/user-data.html
 exemplo com:
 ALB > AutoScaling > com cloudWatch
 VPC > 4 subnets
-EC2 e RDS
 SGP e igw
+EC2

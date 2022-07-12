@@ -26,8 +26,8 @@ resource "aws_launch_template" "this" {
 resource "aws_autoscaling_group" "this" {
   name                      = "terraform-autoscaling"
   vpc_zone_identifier       = [aws_subnet.this["pub_a"].id, aws_subnet.this["pub_b"].id]
-  max_size                  = 1
-  min_size                  = 1
+  max_size                  = 4
+  min_size                  = 2
   health_check_grace_period = 240
   health_check_type         = "ELB"
   force_delete              = true
@@ -55,18 +55,4 @@ resource "aws_autoscaling_policy" "scaledown" {
   scaling_adjustment     = "-1"
   cooldown               = "180"
   policy_type            = "SimpleScaling"
-}
-
-#--------------------------------------------
-# EC2 > privada - jenkins
-#--------------------------------------------
-resource "aws_instance" "machine" {
-  ami           = var.instance_ami
-  instance_type = var.instance_type
-
-  vpc_security_group_ids = [aws_security_group.jenkins.id]
-  subnet_id              = aws_subnet.this["pvt_b"].id
-  availability_zone      = "${var.aws_region}b"
-
-  tags = merge(local.common_tags, { Name = "Machine-private" })
 }
