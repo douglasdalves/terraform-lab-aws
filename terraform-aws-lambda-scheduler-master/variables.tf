@@ -19,6 +19,8 @@ variable "exclude" {
   description = "common separated list of EC2 and RDS instance ids to exclude from scheduling."
 }
 
+
+#--------------- teste mudando horário
 variable "default" {
   default     = "{\"mon\": {\"start\": 7, \"stop\": 20},\"tue\": {\"start\": 7, \"stop\": 20},\"wed\": {\"start\": 7, \"stop\": 20},\"thu\": {\"start\": 7, \"stop\": 20}, \"fri\": {\"start\": 7, \"stop\": 20}}"
   description = "the default schedule tag containing json schedule information to add to instance when schedule_tag_force set to true."
@@ -56,4 +58,18 @@ variable "subnet_ids" {
 variable "resource_name_prefix" {
   default     = ""
   description = "a prefix to apply to resource names created by this module."
+}
+
+
+#-----------------------------------------------------
+variable "aws_profile" {
+  type        = string
+  description = ""
+  default     = "lab-terraform"
+}
+
+variable "aws_account_id" {
+  type        = number
+  description = ""
+  default     = 060697273175
 }

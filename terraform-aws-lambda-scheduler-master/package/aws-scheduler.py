@@ -45,6 +45,8 @@ def create_schedule_tag(instance):
         if 'aws:autoscaling:groupName' in tag['Key']:
            autoscaling = True
 
+#-------- teste de hora
+
     if (create_schedule_tag_force == 'True') and (instance.id not in exclude_list) and (not autoscaling):
         try:
             schedule_tag =  os.getenv('TAG', 'schedule')
