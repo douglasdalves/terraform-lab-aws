@@ -113,3 +113,9 @@ list of subnet_ids that the scheduler runs in. Defaults to []. Usually this does
 
 ### resource_name_prefix
 The prefix to apply to resource names. E.g. setting this to `cluster1-` will create the Lambda as `cluster1-aws-scheduler` rather than `aws-schedule`. default = "".
+
+
+
+#------------------------------------
+exemplo para ECS
+https://towardsaws.com/start-stop-aws-ecs-services-on-a-schedule-b35e14d8d2d5
