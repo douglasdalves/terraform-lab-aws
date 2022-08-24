@@ -81,7 +81,7 @@ resource "aws_iam_user" "user" {
 }
 
 resource "aws_iam_group" "group" {
-  name = "Admin-payer"
+  name = "admin"
 }
 
 resource "aws_iam_access_key" "brand_new_user" {
