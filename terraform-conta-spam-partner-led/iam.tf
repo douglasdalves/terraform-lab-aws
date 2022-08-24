@@ -75,15 +75,15 @@ resource "aws_iam_group_policy" "Policy_Billing" {
 ## ----------------------------------------------------------##
 ## Dados do iam
 ## ----------------------------------------------------------##
-# resource "aws_iam_user" "user" {
-#   name = "user-compass-config"
-#   tags = var.registro
-# }
+resource "aws_iam_user" "user" {
+  name = "user-compass-config"
+  tags = var.registro
+}
 
 resource "aws_iam_group" "group" {
   name = "Admin-payer"
 }
 
-# resource "aws_iam_access_key" "brand_new_user" {
-#   user = aws_iam_user.user.name
-# }
+resource "aws_iam_access_key" "brand_new_user" {
+  user = aws_iam_user.user.name
+}

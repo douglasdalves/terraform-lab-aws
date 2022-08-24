@@ -8,7 +8,7 @@ variable "aws_region" {
 variable "aws_profile" {
   type        = string
   description = ""
-  default     = "payer-clickbus"
+  default     = "lab-terraform"
 }
 
 # variable "aws_account_id" {
@@ -24,7 +24,7 @@ variable "registro" {
 
   default = {
     "Owner"       = "Compass-cloud-n1"
-    "Environment" = "Payer-ECAM-Partnet-led"
+    "Environment" = "Conta-SPAM-Partnet-led"
     "ManagedBy"   = "Terraform"
   }
 }
