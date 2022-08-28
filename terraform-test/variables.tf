@@ -24,8 +24,6 @@ variable "registro" {
   description = "Tags do terraform para criar payer."
 
   default = {
-    "Owner"       = "Compass-cloud-n1"
-    "Environment" = "Conta-SPAM-Partnet-led"
-    "ManagedBy"   = "Terraform"
+    "ManagedBy" = "Terraform"
   }
 }
