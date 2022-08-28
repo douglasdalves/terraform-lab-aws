@@ -1,6 +1,6 @@
 variable "aws_region" {
   type        = string
-  description = ""
+  description = "Preecha a região a ser usada."
   default     = "us-east-1"
 }
 
@@ -15,15 +15,17 @@ variable "aws_profile" {
 # variable "aws_account_id" {
 #   type        = number
 #   description = ""
-#   default     = 060697273175
+#   default     = 
 # }
 
 
 variable "registro" {
   type        = map(string)
-  description = "Tags do terraform para criar payer."
+  description = "Tags do terraform para contas."
 
   default = {
-    "ManagedBy" = "Terraform"
+    "Owner"       = "Compass-cloud-n1"
+    "Environment" = "Conta-SPAM-Partnet-led"
+    "ManagedBy"   = "Terraform"
   }
 }

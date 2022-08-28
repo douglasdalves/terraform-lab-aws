@@ -19,19 +19,10 @@ provider "aws" {
   profile = var.aws_profile
 }
 
-# locals {
-#   common_tags = {
-#     CreateDate  = timestamp()
-#     brasilia_tz = timeadd(local.CreateDate, "-3h")
-#     date_br     = formatdate("DD/MM/YYYY", local.brasilia_tz)
-#   }
-#   tags = merge(var.registro, local.common_tags)
-# }
-
 locals {
-    now  = timestamp()
-    brasilia_tz = timeadd(local.now, "-3h")
-    date_br     = formatdate("DD/MM/YYYY", local.brasilia_tz)
+  now         = timestamp()
+  brasilia_tz = timeadd(local.now, "-3h")
+  date_br     = formatdate("DD/MM/YYYY", local.brasilia_tz)
 }
 
 locals {

@@ -2,8 +2,12 @@
 
 resource "aws_iam_role" "role_AccountAdmin" {
   name = "CrossAccountAdmin"
-  #tags = var.registro
-  tags = merge(local.common_tags)
+  tags = merge(var.registro, local.common_tags)
+    lifecycle {
+    ignore_changes = [
+      tags["CreatedDate"]
+    ]
+  }
 
   assume_role_policy = <<EOF
 {
