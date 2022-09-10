@@ -18,11 +18,6 @@ variable "aws_profile" {
 #   default     = 
 # }
 
-variable "root_details" {
-  type        = string
-  description = "Preencher com o target_ID do organizarion - root"
-  default     = "r-qlsg"
-}
 
 variable "registro" {
   type        = map(string)
@@ -34,3 +29,5 @@ variable "registro" {
     "ManagedBy"   = "Terraform"
   }
 }
+
+
