@@ -30,3 +30,6 @@ locals {
     CreatedDate = local.brasilia_tz
   }
 }
+
+### Get Account id current
+data "aws_caller_identity" "current" {}

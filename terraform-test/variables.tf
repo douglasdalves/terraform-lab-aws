@@ -12,12 +12,6 @@ variable "aws_profile" {
   #default     = "demonstracao-perito"
 }
 
-# variable "aws_account_id" {
-#   type        = number
-#   description = ""
-#   default     = 
-# }
-
 
 variable "registro" {
   type        = map(string)
@@ -25,9 +19,22 @@ variable "registro" {
 
   default = {
     "Owner"       = "Compass-cloud-n1"
-    "Environment" = "Conta-SPAM-Partnet-led"
+    "Environment" = "Conta-test"
     "ManagedBy"   = "Terraform"
   }
 }
 
+variable "enable_cloudtrail" {
+  type    = bool
+  default = true
+}
+variable "is_multi_region_trail" {
+  type    = bool
+  default = false
+}
 
+
+variable "cross_account_arn" {
+  type    = string
+  default = "arn:aws:iam::766581111222:root"
+}
