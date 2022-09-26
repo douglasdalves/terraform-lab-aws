@@ -18,18 +18,3 @@ provider "aws" {
   region  = var.aws_region
   profile = var.aws_profile
 }
-
-locals {
-  now         = timestamp()
-  brasilia_tz = timeadd(local.now, "-3h")
-  date_br     = formatdate("DD/MM/YYYY", local.brasilia_tz)
-}
-
-locals {
-  common_tags = {
-    CreatedDate = local.brasilia_tz
-  }
-}
-
-### Get Account id current
-data "aws_caller_identity" "current" {}

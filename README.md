@@ -1,6 +1,9 @@
 <h1 align="center"> Laboratório de código para Terraform </h1>
 
-![descrição da imagem](https://imgur.com/7miBcAA)
+<div style="display: inline_block"><br>
+  <img align="center" alt="Repositório Automações de Tf" height="30" width="40" src="https://1drv.ms/u/s!Aq_1ShL0E6YquV-pvhsSiHrV1XJR?e=Yf5zvk">
+<div>
+
 
 ## Badges
 
