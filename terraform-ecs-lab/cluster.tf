@@ -1,5 +1,5 @@
 resource "aws_ecs_cluster" "clt" {
-  name = "white-hart"
+  name = "clt-ecs-fargate"
 
   setting {
     name  = "containerInsights"
